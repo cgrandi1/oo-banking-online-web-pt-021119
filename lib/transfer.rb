@@ -1,3 +1,4 @@
+require 'pry'
 class Transfer
   
   attr_accessor :status 
@@ -20,6 +21,7 @@ class Transfer
   end 
   
   def execute_transaction
+    binding.pry
     @receiver.balance << amount 
   end 
 end
