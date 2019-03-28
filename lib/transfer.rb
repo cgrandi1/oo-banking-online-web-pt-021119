@@ -26,9 +26,9 @@ class Transfer
       @sender.balance -= amount
       @status = "complete"
     end 
+    binding.pry
     if @status == "rejected"
        return "Transaction rejected. Please check your account balance."
-       binding.pry
     end 
   end 
 end
