@@ -32,9 +32,9 @@ class Transfer
   end
   
   def reverse_transfer
-    if @status == "pending" && valid? == true && @sender.balance >= @amount
-      @sender.balance -= @amount
-      @receiver.balance += @amount
+    if @status == "pending" && valid? == true && @receiver.balance >= @amount
+      @sender.balance += @amount
+      @receiver.balance -= @amount
       @status = "complete"
     else
       @status = "rejected"
